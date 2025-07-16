@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Framerly Docs</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+
+
+<body class="bg-gray-100 text-gray-800 font-sans">
+  <div class="min-h-screen flex flex-col">
+    <!-- Header -->
+    <header class="bg-indigo-600 text-white shadow">
+      <div class="container mx-auto px-4 py-4">
+        <h1 class="text-2xl font-bold">📦 Framerly</h1>
+        <p class="text-sm">Framework ultra-ligero sin servidor, sin build, sin compiladores</p>
+      </div>
+    </header>
+
+    <!-- Main content -->
+    <main class="container mx-auto px-4 py-8 flex-1">
+      <section class="mb-8">
+        <h2 class="text-xl font-semibold mb-2">🔍 ¿Qué es Framerly?</h2>
+        <p class="text-gray-700">
+          Framerly es un micro-framework que te permite construir aplicaciones SPA sin necesidad de Webpack, Vite ni
+          servidores backend. Funciona sobre rutas declaradas en un JSON y carga HTML dinámicamente en un contenedor <strong>< content ></content></strong> aquí <strong>< /content ></strong>.
+        </p>
+      </section>
+
+      <section class="mb-8">
+        <h2 class="text-xl font-semibold mb-2">📁 Estructura del proyecto</h2>
+        <pre class="bg-gray-900 text-green-400 p-4 rounded text-sm overflow-auto"><code>
+📁 /tu-proyecto
+├── index.html
+├── router.json
+└── templates/
+    ├── home.html
+    ├── about.html
+    └── default.html
+        </code></pre>
+      </section>
+
+      <section class="mb-8">
+        <h2 class="text-xl font-semibold mb-2">🔗 Navegación</h2>
+        <p class="mb-2">Usa el tag personalizado <strong>< routes ></routes></strong> para generar navegación:</p>
+        <pre class="bg-gray-900 text-blue-100 p-4 rounded text-sm overflow-auto"><code>
+&lt;routes class="flex gap-4"&gt;
+  &lt;a href="/default"&gt;Default&lt;/a&gt;
+  &lt;a href="/home"&gt;Inicio&lt;/a&gt;
+  &lt;a href="/about"&gt;Acerca&lt;/a&gt;
+&lt;/routes&gt;
+        </code></pre>
+        <p class="text-sm text-gray-600 mt-2">* Puedes agregar clases como `flex`, `gap`, etc de tailwindcss.</p>
+      </section>
+
+      <section class="mb-8">
+        <h2 class="text-xl font-semibold mb-2">⚙️ router.json</h2>
+        <p class="mb-2">Define tus rutas aquí. Usa `default` como fallback:</p>
+        <pre class="bg-gray-900 text-yellow-100 p-4 rounded text-sm overflow-auto"><code>
+{
+  "default": "templates/default.html",
+  "/home": "templates/home.html",
+  "/about": "templates/about.html",
+  "/perfil": "templates/perfil.html"
+}
+        </code></pre>
+      </section>
+
+      <section class="mb-8">
+        <h2 class="text-xl font-semibold mb-2">📥 Cargar contenido dinámicamente</h2>
+        <p class="mb-2">Puedes usar `data-load="/about"` en cualquier botón o elemento para cargar contenido:</p>
+        <pre class="bg-gray-900 text-pink-100 p-4 rounded text-sm overflow-auto"><code>
+&lt;button data-load="/about" class="bg-blue-600 text-white px-4 py-2 rounded"&gt;
+  Ir a Acerca
+&lt;/button&gt;
+        </code></pre>
+      </section>
+
+      <section class="mb-8">
+        <h2 class="text-xl font-semibold mb-2">🎬 Módulo principal</h2>
+        <p class="mb-2">Tu archivo `framerly.js` maneja la navegación, carga de componentes y actualiza la URL con
+          `?page=`.</p>
+        <p class="text-sm text-gray-600 mt-1">* También escucha `popstate` para permitir historial con los botones del
+          navegador.</p>
+      </section>
+
+      <section>
+        <h2 class="text-xl font-semibold mb-2">📦 Compatible con Live Server</h2>
+        <p class="text-gray-700">Sí, puedes correrlo con extensiones tipo "Live Server" en VSCode sin problemas.</p>
+      </section>
+    </main>
+
+
+  </div>
+</body>
+
+</html>
