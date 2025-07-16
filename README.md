@@ -1,4 +1,10 @@
 # 📦 Framerly
+/*!
+ * Framerly v0.1
+ * (c) 2025 JossFramework
+ * Released under the MIT License
+ * https://github.com/JossFramework/framerly
+ */
 
 **Framerly** es un micro-framework ultra ligero para construir sitios SPA sin servidores, sin compiladores y sin herramientas de build como Webpack o Vite.
 Funciona únicamente con HTML, JSON y JavaScript nativo, aprovechando rutas declarativas y carga dinámica de componentes. Perfecto para proyectos pequeños, prototipos rápidos o documentación interactiva.
