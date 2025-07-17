@@ -5,95 +5,28 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Framerly Docs</title>
-  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    pre {
+      white-space: pre-wrap;
+      word-break: break-word;
+    }
+  </style>
 </head>
 
-<body class="bg-gray-100 text-gray-800 font-sans">
+<body class="bg-white text-gray-800 font-sans leading-relaxed">
   <div class="min-h-screen flex flex-col">
-    <!-- Header -->
-    <header class="bg-indigo-600 text-white shadow">
-      <div class="container mx-auto px-4 py-4">
-        <h1 class="text-2xl font-bold">📦 Framerly</h1>
-        <p class="text-sm">Framework ultra-ligero sin servidor, sin build, sin compiladores</p>
-      </div>
-    </header>
+
+
 
     <!-- Main content -->
-    <main class="container mx-auto px-4 py-8 flex-1">
+    <main class="max-w-4xl mx-auto px-6 py-10 flex-1 space-y-10">
+       
 
-      <section class="mb-8">
-        <h2 class="text-xl font-semibold mb-2">🌐 Conectarse al CDN</h2>
-        <p class="mb-2">Para comenzar a usar Framerly, simplemente agrega el siguiente script al final de tu HTML:</p>
-        <pre class="bg-gray-900 text-white p-4 rounded text-sm overflow-auto"><code>
-&lt;script type="module" src="https://cdn.jsdelivr.net/gh/JossFramework/framerly/framerly.js"&gt;&lt;/script&gt;
-        </code></pre>
-        <p class="text-sm text-gray-600 mt-2">* Este CDN carga automáticamente el módulo principal con soporte para rutas, navegación SPA y carga dinámica.</p>
-      </section>
-
-      <section class="mb-8">
-        <h2 class="text-xl font-semibold mb-2">🔍 ¿Qué es Framerly?</h2>
-        <p class="text-gray-700">
-          Framerly es un micro-framework que te permite construir aplicaciones SPA sin necesidad de Webpack, Vite ni
-          servidores backend. Funciona sobre rutas declaradas en un JSON y carga HTML dinámicamente en un contenedor <strong><content></content></strong>.
-        </p>
-      </section>
-
-      <section class="mb-8">
-        <h2 class="text-xl font-semibold mb-2">📁 Estructura del proyecto</h2>
-        <pre class="bg-gray-900 text-green-400 p-4 rounded text-sm overflow-auto"><code>
-📁 /tu-proyecto
-├── index.html
-├── router.json
-└── templates/
-    ├── home.html
-    ├── about.html
-    └── default.html
-        </code></pre>
-      </section>
-
-      <section class="mb-8">
-        <h2 class="text-xl font-semibold mb-2">🔗 Navegación</h2>
-        <p class="mb-2">Usa el tag personalizado <strong>&lt;routes&gt;</strong> para generar navegación:</p>
-        <pre class="bg-gray-900 text-blue-100 p-4 rounded text-sm overflow-auto"><code>
-&lt;routes class="flex gap-4"&gt;
-  &lt;a href="/default"&gt;Default&lt;/a&gt;
-  &lt;a href="/home"&gt;Inicio&lt;/a&gt;
-  &lt;a href="/about"&gt;Acerca&lt;/a&gt;
-&lt;/routes&gt;
-        </code></pre>
-        <p class="text-sm text-gray-600 mt-2">* Puedes agregar clases como `flex`, `gap`, etc. desde Tailwind CSS.</p>
-      </section>
-
-      <section class="mb-8">
-        <h2 class="text-xl font-semibold mb-2">⚙️ router.json</h2>
-        <p class="mb-2">Define tus rutas aquí. Usa `default` como fallback:</p>
-        <pre class="bg-gray-900 text-yellow-100 p-4 rounded text-sm overflow-auto"><code>
-{
-  "default": "templates/default.html",
-  "/home": "templates/home.html",
-  "/about": "templates/about.html",
-  "/perfil": "templates/perfil.html"
-}
-        </code></pre>
-      </section>
-
-      <section class="mb-8">
-        <h2 class="text-xl font-semibold mb-2">📥 Cargar contenido dinámicamente</h2>
-        <p class="mb-2">Puedes usar `data-load="/about"` en cualquier botón o elemento para cargar contenido:</p>
-        <pre class="bg-gray-900 text-pink-100 p-4 rounded text-sm overflow-auto"><code>
-&lt;button data-load="/about" class="bg-blue-600 text-white px-4 py-2 rounded"&gt;
-  Ir a Acerca
-&lt;/button&gt;
-        </code></pre>
-      </section>
+      <!-- load doc component -->
+      <component src="/docs"></component>
 
 
 
-      <section>
-        <h2 class="text-xl font-semibold mb-2">📦 Compatible con Live Server</h2>
-        <p class="text-gray-700">Sí, puedes correrlo con extensiones tipo "Live Server" en VSCode sin problemas.</p>
-      </section>
-    </main>
   </div>
 </body>
 

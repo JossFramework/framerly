@@ -1,7 +1,7 @@
 
-{
+{ 
   "default": "templates/default.html",
   "/doc": "templates/doc.html",
   "/about": "templates/about.html",
-  "/explore": "templates/explore.html"
+  "components": "/components"  
 }

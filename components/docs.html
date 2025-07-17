@@ -1,0 +1,109 @@
+<!-- Sección: Qué es -->
+<section>
+    <h2 class="text-xl font-semibold text-gray-900 mb-2"> 🗪 ¿Qué es Framerly?</h2>
+    <p class="text-sm text-gray-500 mt-2 mb-2">Framerly es un micro-framework para crear SPAs sin compiladores ni servidores. Usa rutas JSON y carga HTML
+        dinámicamente de forma declarativa osea que te permite cargar tanto páginas como componentes similar a un framework router real pero sin depender de un servidor, builders ni compiladores todo inline, además guarda el estado y scroll de la página en su última instancia, perfecto para quienes búscan desarrollar landing pages rápidas o SPA simples sin tanta complicacción.</p>
+</section>
+
+<!-- Sección: CDN -->
+<section>
+    <h2 class="text-xl font-semibold text-gray-900 mb-2">જ⁀➴ Conectarse al CDN</h2>
+    <p class="text-sm text-gray-500 mt-2 mb-2">1. Agrega este script al final de tu archivo index.html o de tú página principal que usarás, Este CDN incluye rutas, navegación SPA y carga dinámica de HTML.:</p>
+    <pre
+        class="bg-gray-50 border border-gray-200 p-4 rounded text-sm text-gray-800 bg-white"><code>&lt;script type="module" src="https://cdn.jsdelivr.net/gh/JossFramework/framerly/framerly.js"&gt;&lt;/script&gt;</code></pre>
+    
+</section>
+
+
+<!-- Sección: Estructura -->
+<section>
+    <h2 class="text-xl font-semibold text-gray-900 mb-2">🗁 Estructura del proyecto</h2>
+     <p class="text-sm text-gray-500 mt-2 mb-2">2. Crea esta estructura en tu proyecto, es flexible si adaptas tus rutas puedes crear la estructura que gustes, siempre y cuándo coloques bien las rutas en el router.json:</p>
+    <pre class="bg-gray-50 border border-gray-200 p-4 rounded text-sm text-gray-800 bg-white"><code>
+🗀 /tu-proyecto
+├── index.html
+├── router.json
+└── templates/
+    ├── home.html
+    ├── about.html
+    └── default.html
+        </code></pre>
+</section>
+
+
+
+<!-- Sección: router.json -->
+<section>
+    <h2 class="text-xl font-semibold text-gray-900 mb-2">☀︎ router.json</h2>
+    <p class="text-sm text-gray-500 mt-2 mb-2">3. Define aquí tus rutas. Usa <strong>default</strong> cómo página principal
+        a cargar y <strong>components</strong> es la ruta donde se encuentran los componentes</p></p> 
+    <pre class="bg-gray-50 border border-gray-200 p-4 rounded text-sm text-gray-800 bg-white"><code>{
+  "default": "templates/default.html",
+  "/home": "templates/home.html",
+  "/about": "templates/about.html",
+  "components": "templates/components/"
+}</code></pre>
+</section>
+
+
+<!-- Sección: Navegación -->
+<section>
+    <h2 class="text-xl font-semibold text-gray-900 mb-2">✵ Navegación</h2>
+    <p class="text-sm text-gray-500 mt-2 mb-2">4. Usa la etiqueta <strong>routes</strong> para utilizar tus rutas de navegación define varias rutas con la etiqueta <strong>&lt;a&gt; &lt;/a&gt; </strong>:
+    </p>
+    <pre class="bg-gray-50 border border-gray-200 p-4 rounded text-sm text-gray-800 bg-white"><code>
+&lt;routes&gt;
+  &lt;a href="/default"&gt;Default&lt;/a&gt;
+  &lt;a href="/home"&gt;Inicio&lt;/a&gt;
+  &lt;a href="/about"&gt;Acerca&lt;/a&gt;
+&lt;/routes&gt;
+        </code></pre>
+</section>
+
+
+
+<section>
+    <h2 class="text-xl font-semibold text-gray-900 mb-2">⌗ Contenido </h2>
+    <p class="text-sm text-gray-500 mt-2 mb-2">5. Debes agregar la etiqueta <strong>&lt;content&gt;</strong> para que el contenido funcione y se cargue puedes colocarla en cualquier lugar de tu página principal ejemplo index.html. </p>
+    <pre class="bg-gray-50 border border-gray-200 p-4 rounded text-sm text-gray-800 bg-white"><code>
+&lt;content&gt;
+  Aquí se cargará las páginas de forma dinámica
+&lt;/content&gt;
+        </code></pre>
+
+</section>
+
+
+
+<section>
+    <h2 class="text-xl font-semibold text-gray-900 mb-2">✦ Componentes</h2>
+    <p class="text-sm text-gray-500 mt-2 mb-2">Para cargar componentes usa la etiqueta <strong>&lt;component src="name"&gt;</strong> en src coloca el nombre exacto del componente </p>
+    <pre class="bg-gray-50 border border-gray-200 p-4 rounded text-sm text-gray-800 bg-white"><code>
+&lt;component src="card"&gt;
+  Aquí se cargará las páginas de forma dinámica
+&lt;/component&gt;
+        </code></pre>
+
+</section>
+
+
+
+<!-- Sección: Data-load -->
+<section>
+    <h2 class="text-xl font-semibold text-gray-900 mb-2">⇄ Cargar contenido dinámicamente</h2>
+    <p class="text-sm text-gray-500 mt-2 mb-2">También puedes usar <code>data-load="/about"</code> en cualquier botón o
+        enlace:</p>
+    <pre class="bg-gray-50 border border-gray-200 p-4 rounded text-sm text-gray-800 bg-white"><code>
+&lt;button data-load="/about" class="px-4 py-2 bg-gray-800 text-white rounded"&gt;
+  Ir a Acerca
+&lt;/button&gt;
+        </code></pre>
+</section>
+
+
+<!-- Sección: Live Server -->
+<section>
+    <h2 class="text-xl font-semibold text-gray-900 mb-2">⚡ Compatible con Live Server</h2>
+    <p class="text-sm text-gray-500 mt-2 mb-2">Framerly funciona perfectamente con extensiones como "Live Server" de VSCode.</p>
+</section>
+</main>
