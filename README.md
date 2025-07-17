@@ -33,7 +33,7 @@ Funciona únicamente con HTML, JSON y JavaScript nativo, aprovechando rutas decl
 1. Agrega este script al final de tu archivo `index.html` o de tu página principal que usarás. Este CDN incluye rutas, navegación SPA y carga dinámica de HTML:
 
 ```html
-<script type="module" src="https://cdn.jsdelivr.net/gh/JossFramework/framerly/framerly.js"></script>
+<script type="module" src="https://cdn.jsdelivr.net/gh/JossFramework/framerly@v1.0.0/framerly.js"></script>
 ```
 
 <br>
