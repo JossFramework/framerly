@@ -1,36 +1,32 @@
 <html lang="es">
-
-<head>
+  <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Framerly</title>
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <!-- Import animations CSS -->
     <component src="/animations"></component>
-</head>
+  </head>
 
-<body class="bg-gray-50 text-gray-800 h-full">
-
-
+  <body class="bg-gray-50 text-gray-800 h-full">
     <!-- load header component -->
     <component src="/header"></component>
-
+    
 
     <!-- dynamic content -->
-    <content >
-
-    </content>
+    <content> </content>
 
 
-
-    <!-- load footer component -->
-    <component src="/footer" ></component>
-
-
+    
+    <!-- donations -->
+    <component src="/footer"></component>
 
     <!-- CDN Framerly v1.0.0 -->
-    <script type="module" src="https://cdn.jsdelivr.net/gh/JossFramework/framerly@v1.0.0/framerly.js"></script>
-
-</body>
-
+    <script
+      type="module"
+      src="https://cdn.jsdelivr.net/gh/JossFramework/framerly@v1.0.0/framerly.js"
+    ></script>
+     
+    <script data-name="BMC-Widget" data-cfasync="false" src="https://cdnjs.buymeacoffee.com/1.0.0/widget.prod.min.js" data-id="Jossframework" data-description="Support me on Buy me a coffee!" data-message="Apoya para seguir impulsando ❤️" data-color="#5F7FFF" data-position="Right" data-x_margin="18" data-y_margin="18"></script>
+  </body>
 </html>
