@@ -1,4 +1,6 @@
 # Framerly
+[![](https://data.jsdelivr.com/v1/package/gh/JossFramework/framerly/badge)](https://www.jsdelivr.com/package/gh/JossFramework/framerly)
+
 /*!
  * Framerly v0.1
  * (c) 2025 JossFramework
