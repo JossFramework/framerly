@@ -48,6 +48,8 @@ Funciona únicamente con HTML, JSON y JavaScript nativo, aprovechando rutas decl
 🗀 /tu-proyecto
 ├── index.html
 ├── router.json
+└── components/
+    ├── header.html
 └── templates/
     ├── home.html
     ├── about.html
@@ -65,7 +67,7 @@ Funciona únicamente con HTML, JSON y JavaScript nativo, aprovechando rutas decl
   "default": "templates/default.html",
   "/home": "templates/home.html",
   "/about": "templates/about.html",
-  "components": "templates/components/"
+  "components": "/components"
 }
 ```
 
